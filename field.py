@@ -7,15 +7,17 @@ import matplotlib as plt
 import time
 from qiskit import QuantumCircuit
 from qiskit import Aer, execute
+from qiskit.visualization import plot_histogram
 # makes quantum curcuit for the hieght
-blockHeightCurcuit=QuantumCurcuit(2,2)
-circ.h(0)
-circ.h(1)
-circ.draw(output='mpl')
+blockHeightCurcuit=QuantumCircuit(1,1)
+blockHeightCurcuit.x(0)
+
+blockHeightCurcuit.draw(output='mpl')
 backend_sim = Aer.get_backend('qasm_simulator')
-for j in range(2):
-    qc_output.measure(j,j)
-    
+sim = execute(blockHeightCurcuit, backend_sim, shots=1000)
+sim_result = sim.result()
+counts = sim_result.get_counts(blockHeightCurcuit)
+print(counts)
 
 boardspace =[[0, 0, 0, 0, 0, 0, 0], 
              [0, 0, 0, 0, 0, 0, 0],
