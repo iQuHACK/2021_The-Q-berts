@@ -14,6 +14,11 @@ Feel free to contact the staff with questions over our [event's slack](https://i
 
 Good luck!
 
+<<<<<<< HEAD
 YASSS
 waeyreutkuhljk.
 bojaejogoj
+=======
+
+This is a test, did I resolve conflict?
+>>>>>>> 2813dac0f2f7032f27f1156645195b840aeeaafa
