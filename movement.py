@@ -1,5 +1,12 @@
 import pyglet
 
+pyglet.resource.path = ['../images']
+pyglet.resource.reindex()
+
+player_image = pyglet.resource.image("q.png")
+bullet_image = pyglet.resource.image("bullet.png")
+asteroid_image = pyglet.resource.image("asteroid.png")
+
 window = pyglet.window.Window()
 from pyglet.window import key
 
