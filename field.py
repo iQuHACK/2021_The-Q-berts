@@ -17,9 +17,9 @@ backend_sim = Aer.get_backend('')
 for j in range(2):
     qc_output.measure(j,j)
     
+
 boardspace =[[0, 0, 0, 0, 0], 
              [0, 0, 0, 0, 0], 
              [0, 0, 0, 0, 0], 
              [0, 0, 0, 0, 0], 
              [0, 0, 0, 0, 0]]
-
