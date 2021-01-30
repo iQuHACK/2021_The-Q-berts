@@ -1,19 +1,30 @@
+import sys
+!{sys.executable} -m pip install pyglet
+
 import pyglet
 
-pyglet.resource.path = ['../images']
+pyglet.resource.path = ["images"]
 pyglet.resource.reindex()
 
-player_image = pyglet.resource.image("qbert.png")
+player_image = pyglet.resource.image("qbert.PNG")
 
 window = pyglet.window.Window()
 from pyglet.window import key
+from window import resources
 
-class PhysicalObject(pyglet.sprite.Sprite):
+def center_image(image):
+    """Sets an image's anchor point to its center"""
+    image.anchor_x = image.width // 2
+    image.anchor_y = image.height // 2
+    
+center_image(player_image)
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+@window.event
+def on_draw():
+    player_qbert = pyglet.sprite.Sprite(img=resources.player_image, x=400, y=300)
 
-        self.velocity_x, self.velocity_y = 0.0, 0.0
+x1_change = 0
+y1_change = 0
 
 @window.event
 def on_key_press(symbol, modifiers):
