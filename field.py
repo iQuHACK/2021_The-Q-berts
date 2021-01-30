@@ -12,14 +12,15 @@ blockHeightCurcuit=QuantumCurcuit(2,2)
 circ.h(0)
 circ.h(1)
 circ.draw(output='mpl')
-backend_sim = Aer.get_backend('')
-#note- insert name of quantum computer we're using in there^
+backend_sim = Aer.get_backend('qasm_simulator')
 for j in range(2):
     qc_output.measure(j,j)
     
 
-boardspace =[[0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0]]
+boardspace =[[0, 0, 0, 0, 0, 0, 0], 
+             [0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0],
+             [0, 0, 0, 0, 0, 0, 0]]
