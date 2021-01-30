@@ -6,3 +6,4 @@ import Pyglet
 import random
 
 pyglet.resource.path = ["images"]
+pyglet.resource.reindex()
