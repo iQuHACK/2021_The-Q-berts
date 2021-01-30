@@ -7,4 +7,4 @@ import matplotlib as plt
 import time
 from qiskit import QuantumCircuit, QuantumRegister
 circ.h(0)
-boardspace = [[
+boardspace = [[]]
