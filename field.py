@@ -30,9 +30,9 @@ boardspace =[[0, 0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 0, 0, 0]]
 
 plot_histogram(counts)
-def x_measurement(blockHeightCircuit,qubit,cbit):
+# def x_measurement(blockHeightCircuit,qubit,cbit):
 
-    blockHeightCircuit.measure(qubit, cbit)
-    blockHeightCircuit.h(qubit)
-    return blockHeightCircuit
+#     blockHeightCircuit.measure(qubit, cbit)
+#     blockHeightCircuit.h(qubit)
+#     return blockHeightCircuit
 print(x_measurement)
