@@ -10,11 +10,15 @@ We originally named our team "The Q-Berts," and by chance, the 2021 iQuHack chal
 * Used pygame to code motion
 * Used AI to code enemy motion
 * Used quantum circuits to generate probabilities for each cube to create random maps
+* created collision functions to establish interactions between Q-bert and other game items 
 
 
 ## For the Future:
 * Use classes instead of individual variables
 * Add more complex quantum circuits and integrate them into game
+* create a win scenario
+* stop the movement of the enemies when the game is over
+
 
 
 Glhf!
