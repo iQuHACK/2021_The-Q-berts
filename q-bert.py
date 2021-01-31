@@ -13,6 +13,63 @@ screen = pygame.display.set_mode([1000, 800])
 #background
 background = pygame.image.load("spacebackground.PNG")
 
+import os
+print(os.environ.get('IONQ_API_KEY'))
+
+%env IONQ_API_KEY = ***************
+
+import numpy as np
+from numpy import pi
+# import ipywidgets as widgets
+# from IPython.display import display
+# from qutip import Bloch
+import matplotlib
+# import time
+from qiskit import *
+# from qiskit import Aer, execute
+from qiskit.tools.visualization import plot_histogram
+
+from qiskit_ionq_provider import IonQProvider
+
+# makes quantum curcuit for the height, bhcircuit = blockHeightCircuit
+bhCircuit=QuantumCircuit(3, 3)
+bhCircuit.h(1)
+bhCircuit.z(1)
+bhCircuit.h(0)
+bhCircuit.h(2)
+
+# backend_sim = Aer.get_backend('statevector_simulator')
+# sim = execute(bhCircuit, backend_sim, shots=5000)
+# sim_result = sim.result()
+# statevector = sim_result.get_statevector()
+# print(statevector)
+
+bhCircuit.draw(output='mpl')
+
+bhCircuit.measure([0,1,2], [0,1,2])
+
+provider = IonQProvider("***************")
+backend = provider.get_backend("ionq_qpu")
+
+job = backend.run(bhCircuit)
+
+# backend = Aer.get_backend('qasm_simulator')
+# result = execute(bhCircuit, backend = backend, shots = 5000).result()
+# counts = result.get_counts()
+# print(counts)
+
+# boardspace =[[0, 0, 0, 0, 0, 0, 0], 
+#              [0, 0, 0, 0, 0, 0, 0],
+#              [0, 0, 0, 0, 0, 0, 0],
+#              [0, 0, 0, 0, 0, 0, 0],
+#              [0, 0, 0, 0, 0, 0, 0],
+#              [0, 0, 0, 0, 0, 0, 0],
+#              [0, 0, 0, 0, 0, 0, 0]]
+
+# plot_histogram(counts)
+
+result = job.result()
+plot_histogram(result.get_counts())
 
 #player
 player_image = pygame.image.load("qbert.PNG")
