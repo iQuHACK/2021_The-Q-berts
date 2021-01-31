@@ -13,7 +13,8 @@ We originally named our team "The Q-Berts," and by chance, the 2021 iQuHack chal
 
 
 ## For the Future:
-* 
+* Use classes instead of individual variables
+* Add more complex quantum circuits and integrate them into game
 
 
 Glhf!
