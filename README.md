@@ -12,6 +12,8 @@ We originally named our team "The Q-Berts," and by chance, the 2021 iQuHack chal
 * Used quantum circuits to generate probabilities for each cube to create random maps
 * created collision functions to establish interactions between Q-bert and other game items 
 
+## Game Play
+* try to avoid all of the enemies while comings in contact with each cube to change its color. Once all of the cubes are blue, you've won!
 
 ## For the Future:
 * Use classes instead of individual variables
