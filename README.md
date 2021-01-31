@@ -12,7 +12,7 @@ We originally named our team "The Q-Berts," and by chance, the 2021 iQuHack chal
 * Used quantum circuits to generate probabilities for each cube to create random maps
 
 
-## For the future:
+## For the Future:
 * 
 
 
